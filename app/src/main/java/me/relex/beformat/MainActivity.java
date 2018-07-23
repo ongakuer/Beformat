@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         Flowable<String> flowable = Flowable.create(emitter -> {
             long availableSize = IOUtil.getStorageAvailableSize();
             String availableText = Formatter.formatFileSize(getApplicationContext(), availableSize);
-            // 预留空间，500M
-            long spaceSize = IOUtil.IO_BUFFER_SIZE * 200L;
+            // 100MB
+            long freeSpaceSize = IOUtil.IO_BUFFER_SIZE * 100L;
             long totalWriteSize = 0;
             Random random = new Random();
             byte[] bufferByte = new byte[IOUtil.IO_BUFFER_SIZE];
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             File dataDir = new File(Environment.getExternalStorageDirectory(),
                     getApplication().getString(R.string.app_name));
             dataDir.mkdirs();
-            while (totalWriteSize + spaceSize < availableSize) {
+            while (totalWriteSize + freeSpaceSize < availableSize) {
                 if (emitter.isCancelled()) {
                     break;
                 }
