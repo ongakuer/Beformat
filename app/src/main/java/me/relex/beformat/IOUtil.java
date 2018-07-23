@@ -16,7 +16,7 @@ import okio.Okio;
 public class IOUtil {
 
     /**
-     * 1M
+     * 1MB
      */
     public static final int IO_BUFFER_SIZE = 1024 * 1024;
 
@@ -121,7 +121,7 @@ public class IOUtil {
         long size = 0;
         try {
             buffer = Okio.buffer(Okio.sink(file));
-            // 10M ~ 100M
+            // 10MB ~ 100MB
             int randomCount = random.nextInt(90) + 10;
             for (int i = 0; i < randomCount; i++) {
                 random.nextBytes(bufferByte);
