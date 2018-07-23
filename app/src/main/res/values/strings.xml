@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Beformat</string>
+    <string name="app_name_title">Beformat - 防止手机数据恢复</string>
+    <string name="button_text">清空存储卡并写入脏数据</string>
+    <string name="denied_permission_message">没有读写存储权限，请到系统应用管理中授权</string>
+    <string name="exit_alert_message">退出会停止全部数据处理，继续退出？</string>
+    <string name="exit_confirm">退出</string>
+    <string name="exit_cancel">取消</string>
+    <string name="clean_storage">正在清空存储卡</string>
+    <string name="process_progress_format">可用空间：%1$s ，已写入：%2$s</string>
+    <string name="process_finish">处理完成，可以自行恢复出厂设置</string>
+    <string name="process_error">处理出错</string>
+</resources>
